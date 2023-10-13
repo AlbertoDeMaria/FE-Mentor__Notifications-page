@@ -1,0 +1,12 @@
+button {
+    border: 0;
+    background-color: transparent;
+    font-family: $ff-primary, sans-serif;
+    font-size: 0.9rem;
+    
+    cursor: pointer;
+
+    &:hover {
+        color: $primary-blue;
+    }
+}

@@ -1,0 +1,35 @@
+h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: $neutral-very-dark-blue;
+
+    @include responsive("mobile"){
+        font-size: 1.2rem;
+    }
+}
+
+a {
+    font-weight: 800;
+    color: $neutral-dark-grayish-blue;
+
+    &:hover {
+        color: $primary-blue;
+    }
+
+    &.account-name {
+        color: $neutral-very-dark-blue;
+    }
+}
+
+p {
+    font-weight: 500;
+    color: $neutral-dark-grayish-blue;
+
+    @include responsive("mobile"){
+        font-size: 0.8rem;
+    }
+
+    &.time{
+        color: rgba($color: $neutral-dark-grayish-blue, $alpha: 0.3);
+    }
+}

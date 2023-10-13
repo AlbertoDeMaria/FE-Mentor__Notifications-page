@@ -1,0 +1,112 @@
+.notifications-container{
+    max-width: 735px;
+    padding: 1.875rem;
+ 
+    background-color: $neutral-white;
+    border-radius: 15px;
+
+    box-shadow: 5px 5px 100px 4px rgba($neutral-very-dark-blue, 0.1);
+    -webkit-box-shadow: 5px 5px 100px 4px rgba($neutral-very-dark-blue, 0.1); 
+
+    @include responsive("mobile"){
+        border-radius: 0;
+    }
+
+    .container-header{
+        width: 100%;
+    
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+        padding-bottom: 2.5rem;
+
+        @include responsive("mobile"){
+            padding-bottom: 1.25rem;
+        }
+
+        .notifications-counter-container{
+            display: flex;
+            align-items: center;
+            gap: 0.625rem;
+        
+            .counter{
+                color: $neutral-white;
+                background-color: $primary-blue;
+                padding: 0.125rem .65rem;
+                border-radius: 5px;
+            }
+        }
+    }
+
+    .container-body {
+        width: 100%;
+        
+        display: grid;
+        gap: 0.5rem;
+    
+        .notification {
+            display: flex;
+            gap: 1rem;
+
+            padding: 1.25rem 1.25rem;
+            border-radius: 10px;
+
+            .img-box{
+                max-width: 8%;
+            }
+
+            .content-box{
+                
+                .notification-content {
+                    padding-bottom: 5px;
+
+                    .unread-tag{
+                        display: none;
+                    }
+                }
+
+                .private-message{
+                    margin-top: 0.75rem;
+
+                    padding: 1.25rem 1.25rem;
+                    border: 1px solid rgba($color: $neutral-dark-grayish-blue, $alpha: 0.2);
+                    border-radius: 10px;
+                }
+            }
+        }
+
+        .notification[data-read=false] {
+            background-color: $neutral-very-light-grayish-blue;
+
+            .notification-content{
+                display: flex;
+                align-items: center;
+                gap: 0.825rem;
+
+                .unread-tag{
+                    display: block;
+
+                    background-color: $primary-red;
+                    width: 10px;
+                    height: 10px;
+                    border-radius: 100vh;
+                }
+            }
+        }
+
+        .comment-pictures {
+            
+            .content-box { 
+                width: 100%;
+
+                display: flex;
+                justify-content: space-between;
+
+                .post-picture-box{
+                    max-width: 8%;        
+                }                
+            }
+        }
+    }
+}
